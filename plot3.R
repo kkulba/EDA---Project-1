@@ -23,7 +23,7 @@ legend("topright", legend=c("Sub_metering_1",
 box(which = "plot", lty = "solid")
 
 ## Copy my plot to a PNG file
-dev.copy(png, file = "plot3.png")
+dev.copy(png, file = "plot3.png", width=480, height=480)
 
 ## Close the png file device
 dev.off()

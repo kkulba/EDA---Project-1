@@ -26,9 +26,9 @@ lines(x, y2, type = "l", frame = FALSE, col = "red")
 lines(x, y3, type = "l", col = "blue")
 
 # Add legend (3-4)
+
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-       col=c("black", "red", "blue"),
-       lty = 1, cex=0.8, bty='n')
+       col=c("black", "red", "blue"), y.intersp = 0.3, lty = 1, bty='n')
 
 # Add box around plot (3-5)
 box(which = "plot", lty = "solid")
@@ -39,7 +39,7 @@ plot(x = HPC_1$DateTime, y = HPC_1$Global_reactive_power,
      type = "l", col = "black", xlab = "datetime", ylab = "Global_reactive_power")
 
 ## Copy my plot to a PNG file
-dev.copy(png, file = "plot4.png")
+dev.copy(png, file = "plot4.png", width=480, height=480)
 
 ## Close the png file device
 dev.off()
